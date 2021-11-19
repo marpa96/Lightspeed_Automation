@@ -29,10 +29,21 @@ print('Sorting through ', WO_count, ' workorders...')
 for workorder in workorders:
     access = driver.find_element(By.CSS_SELECTOR, "a[title = 'Edit Record']")
     link = access.get_attribute('href')
-    driver.switch_to
 
+    # replace this with a new tab, eventually
     driver.get(link)
 
+    # Find the notes
+    notes_box = select_element(By.CSS_SELECTOR, "[id = 'internal_note']")
+    notes = notes_box.text
+
+    # Extract the dates and number of events with customer
+
+    # Find when the last contact happened
+
+    # if it happened over a month ago, the workorder to a list
+
+    # Close this window and go back to the main one
 
 # Find the last date on which the customer was contacted
 
